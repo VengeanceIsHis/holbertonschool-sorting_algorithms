@@ -8,7 +8,7 @@
  */
 typedef enum bool
   {
-   false = 0.
+   false = 0,
    true
   }bool;
 /**
