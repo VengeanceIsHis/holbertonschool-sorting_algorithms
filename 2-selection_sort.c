@@ -3,6 +3,17 @@
  *
  *
  */
+void swap_i(int *a, int *b)
+{
+  int tmp;
+  tmp = *a;
+  *a = *b;
+  *b = tmp;
+}
+/**
+ *
+ *
+ */
 void selection_sore(int *array, size_t size)
 {
 	int *min;
