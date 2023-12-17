@@ -1,0 +1,22 @@
+#include "sort.h"
+/**
+ *
+ *
+ *
+ */
+void swap_i(int *a, int *b)
+{
+  int tmp;
+  tmp = *a;
+  *a = *b;
+  *b = tmp;
+}
+/**
+ *
+ *
+ *
+ */
+void bubble_sort(int *array, size_t size)
+{
+  size_t i, len = size;
+  bool bubbly = false;
