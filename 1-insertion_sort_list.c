@@ -34,7 +34,7 @@ void insertion_sort_list(listint_t **list)
 		while (insert != NULL && iter->n < insert->n)
 		{
 			swap_n(list, &insert, iter);
-			print_list((const listint_t*)*list);
+			print_list((const listint_t *)*list);
 		}
 	}
 }
