@@ -1,8 +1,9 @@
 #include "sort.h"
 /**
- *
- *
- *
+ *swap_n - swaps two nodes
+ *@h: A pointer to the head of a inputted list.
+ *@n1: A pointer to the first node to swap
+ *@n2: Second node to swap
  */
 void swap_n(listint_t **h, listint_t **n1, listint_t *n2)
 {
@@ -19,7 +20,8 @@ void swap_n(listint_t **h, listint_t **n1, listint_t *n2)
 	*n1 = n2->prev;
 }
 /**
- *
+ *insertion_sort_list - sorts a list of integers using insertion sort
+ *@list: A pointer to the head of a list
  */
 void insertion_sort_list(listint_t **list)
 {
