@@ -14,7 +14,7 @@ void swap_i(int *a, int *b)
  *
  *
  */
-void selection_sore(int *array, size_t size)
+void selection_sort(int *array, size_t size)
 {
 	int *min;
 	size_t i, j;
