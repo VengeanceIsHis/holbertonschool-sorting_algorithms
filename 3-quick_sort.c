@@ -53,7 +53,6 @@ size_t partition(int arr[], size_t low, size_t high, size_t size)
         }
     }
     swap_i(&arr[i + 1], &arr[high]);
-    print_array(arr, size);
     return (i + 1);
 }
 void helper(int arr[], size_t low, size_t high, size_t size)
@@ -62,6 +61,7 @@ void helper(int arr[], size_t low, size_t high, size_t size)
     {
       size_t pi = partition(arr, low, high, size);
       helper(arr, low, pi, size);
+      print_array(arr, size);
       helper(arr, pi + 1, high, size);
     }
 }
