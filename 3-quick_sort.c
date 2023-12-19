@@ -52,7 +52,7 @@ size_t partition(int arr[], size_t low, size_t high)
             swap_i(&arr[i], &arr[j]);
         }
     }
-    swap(&arr[i + 1], &arr[high]);
+    swap_i(&arr[i + 1], &arr[high]);
     return (i + 1);
 }
 void helper(int arr[], size_t low, size_t high)
