@@ -1,0 +1,32 @@
+#include "sort.h"
+/**
+ */
+int median(int arr[], int low, int middle, int high)
+{
+  if (arr[low] < arr[middle])
+    {
+      if (arr[middle] < arr[high])
+	  return (middle);
+	  else if (arr[low] < arr[high] < arr[high])
+	    return (high);
+	  else
+	    return (low);
+    }
+  else
+    {
+      if (arr[low] < arr[high]) {
+	return (low);
+        } else if (arr[middle] < arr[high]) {
+	return (high);
+        } else {
+	return (middle);
+        }
+    }
+}
+size_t partition(int arr[], size_t low, size_t high)
+{
+  size_t middle;
+    middle = (low + high) / 2;
+  size_t pivot;
+  pivot = median(arr, low, middle, high);
+  swap_i(
