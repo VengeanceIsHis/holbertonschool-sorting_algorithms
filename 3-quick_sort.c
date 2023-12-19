@@ -19,7 +19,7 @@ int median(int arr[], int low, int middle, int high)
     {
       if (arr[middle] < arr[high])
 	  return (middle);
-	  else if (arr[low] < arr[high] < arr[high])
+	  else if (arr[low] < arr[high])
 	    return (high);
 	  else
 	    return (low);
