@@ -37,20 +37,19 @@ int median(int arr[], int low, int middle, int high)
 }
 size_t partition(int arr[], size_t low, size_t high)
 {
-  size_t middle;
   int pivot;
-  size_t index, j;
+  size_t index, j, middle, i;
     middle = (low + high) / 2;
   index = median(arr, low, middle, high);
   swap_i(&arr[index], &arr[high]);
   pivot = arr[high];
-  size_t i = low - 1;
+  i = low - 1;
   for (j = low; j < high; j++)
     {
        if (arr[j] <= pivot)
 	{
             i++;
-            swap(&arr[i], &arr[j]);
+            swap_i(&arr[i], &arr[j]);
         }
     }
     swap(&arr[i + 1], &arr[high]);
