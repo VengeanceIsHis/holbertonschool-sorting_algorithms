@@ -66,6 +66,6 @@ void helper(int arr[], size_t low, size_t high)
 }
 void quick_sort(int arr[], size_t size)
 {
-  print_array(arr);
+  print_array(arr, size);
   helper(arr, 0, size - 1);
 }
