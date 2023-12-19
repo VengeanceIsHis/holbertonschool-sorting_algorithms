@@ -60,8 +60,8 @@ void helper(int arr[], size_t low, size_t high, size_t size)
   if (low < high)
     {
       size_t pi = partition(arr, low, high);
-      helper(arr, low, pi, size);
       print_array(arr, size);
+      helper(arr, low, pi, size);
       helper(arr, pi + 1, high, size);
     }
 }
