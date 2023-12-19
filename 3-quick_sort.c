@@ -53,6 +53,7 @@ size_t partition(int arr[], size_t low, size_t high)
         }
     }
     swap_i(&arr[i + 1], &arr[high]);
+    print_array(arr, size);
     return (i + 1);
 }
 void helper(int arr[], size_t low, size_t high)
@@ -66,6 +67,5 @@ void helper(int arr[], size_t low, size_t high)
 }
 void quick_sort(int arr[], size_t size)
 {
-  print_array(arr, size);
   helper(arr, 0, size - 1);
 }
