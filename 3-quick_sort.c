@@ -35,7 +35,7 @@ int median(int arr[], int low, int middle, int high)
         }
     }
 }
-size_t partition(int arr[], size_t low, size_t high, size_t size)
+size_t partition(int arr[], size_t low, size_t high)
 {
   int pivot;
   size_t index, j, middle, i;
@@ -59,10 +59,10 @@ void helper(int arr[], size_t low, size_t high, size_t size)
 {
   if (low < high)
     {
-      size_t pi = partition(arr, low, high, size);
-      helper(arr, low, pi, size);
+      size_t pi = partition(arr, low, high);
+      helper(arr, low, pi);
       print_array(arr, size);
-      helper(arr, pi + 1, high, size);
+      helper(arr, pi + 1, high);
     }
 }
 void quick_sort(int arr[], size_t size)
