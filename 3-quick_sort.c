@@ -64,6 +64,7 @@ void helper(int arr[], size_t size, int low, int high)
 *quick_sort - function that handles the quick sort algorithm
 *@arr: array to be used
 *@size: size of the array
+*/
 void quick_sort(int arr[], size_t size)
 {
 	if (arr == NULL || size < 2)
