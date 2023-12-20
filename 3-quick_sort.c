@@ -12,11 +12,11 @@ void swap_i(int *a, int *b)
 /**
  *
  */
-size_t partition(int arr[], size_t low, size_t high)
+size_t partition(int arr[], int low, int high)
 {
   int *pivot, above, below;
 
-  pivot = arr + right;
+  pivot = arr + high;
   for (above = below = low; below < high; below++)
     {
       if (arr[below] < *pivot)
@@ -37,7 +37,7 @@ size_t partition(int arr[], size_t low, size_t high)
   return (above);
 }
 }
-void helper(int arr[], size_t low, size_t high, size_t size)
+void helper(int arr[], size_t low, int high, int size)
 {
   int part;
   if (high - low > 0)
