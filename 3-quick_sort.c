@@ -12,7 +12,7 @@ void swap_i(int *a, int *b)
 /**
  *
  */
-size_t partition(int arr[], int low, int high)
+size_t partition(int arr[], size_t size, int low, int high)
 {
   int *pivot, above, below;
 
@@ -23,7 +23,7 @@ size_t partition(int arr[], int low, int high)
 	{
 	  if (above < below)
 	    {
-	      swap_i(arr + below, array + above);
+	      swap_i(arr + below, arr + above);
 	      print_array(arr, size);
 	    }
 	  above++;
@@ -35,7 +35,6 @@ size_t partition(int arr[], int low, int high)
       print_array(arr, size);
     }
   return (above);
-}
 }
 void helper(int arr[], size_t low, int high, int size)
 {
