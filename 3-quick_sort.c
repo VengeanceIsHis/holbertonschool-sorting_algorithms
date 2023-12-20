@@ -12,50 +12,27 @@ void swap_i(int *a, int *b)
 /**
  *
  */
-
-int median(int arr[], int low, int middle, int high)
-{
-  if (arr[low] < arr[middle])
-    {
-      if (arr[middle] < arr[high])
-	  return (middle);
-	  else if (arr[low] < arr[high])
-	    return (high);
-	  else
-	    return (low);
-    }
-  else
-    {
-      if (arr[low] < arr[high]) {
-	return (low);
-        } else if (arr[middle] < arr[high]) {
-	return (high);
-        } else {
-	return (middle);
-        }
-    }
-}
 size_t partition(int arr[], size_t low, size_t high)
 {
   int *pivot, above, below;
 
-  pivot = array + right;
+  pivot = arr + right;
   for (above = below = low; below < high; below++)
     {
-      if (array[below] < *pivot)
+      if (arr[below] < *pivot)
 	{
 	  if (above < below)
 	    {
-	      swap_i(array + below, array + above);
-	      print_array(array, size);
+	      swap_i(arr + below, array + above);
+	      print_array(arr, size);
 	    }
 	  above++;
 	}
     }
-  if (array[above] > *pivot)
+  if (arr[above] > *pivot)
     {
-      swap_i(array + above, pivot);
-      print_array(array, size);
+      swap_i(arr + above, pivot);
+      print_array(arr, size);
     }
   return (above);
 }
@@ -72,7 +49,7 @@ void helper(int arr[], size_t low, size_t high, size_t size)
 }
 void quick_sort(int arr[], size_t size)
 {
-  if (array == NULL || size < 2)
+  if (arr == NULL || size < 2)
     return;
-  helper(array, size, 0, size - 1);
+  helper(arr, size, 0, size - 1);
 }
