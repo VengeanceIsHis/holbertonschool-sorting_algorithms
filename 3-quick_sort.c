@@ -36,7 +36,7 @@ size_t partition(int arr[], size_t size, int low, int high)
     }
   return (above);
 }
-void helper(int arr[], size_t low, int high, int size)
+void helper(int arr[], size_t size, int low, int high)
 {
   int part;
   if (high - low > 0)
