@@ -18,6 +18,7 @@ void swap_i(int *a, int *b)
  *@size: size of array
  *@low: Beginning of the array
  *@high:Ending of the array
+ *Return: pointer of the newly sorted array
  */
 size_t partition(int arr[], size_t size, int low, int high)
 {
