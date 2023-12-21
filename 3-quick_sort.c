@@ -49,6 +49,7 @@ size_t partition(int arr[], size_t size, int low, int high)
  *@size: size of the array
  *@low: beginning of the array
  *@high: ending of the array
+ */
 void helper(int arr[], size_t size, int low, int high)
 {
 	int part;
